@@ -1,0 +1,325 @@
+
+
+
+<ion-content  style="margin-top: 250px;">
+
+
+  <div class="ion-padding wrapper">
+
+    <ion-searchbar placeholder="Arama"></ion-searchbar>
+
+    <ion-grid class="ion-no-padding">
+      <ion-row class="ion-align-items-baseline">
+        <ion-col size="6">
+          <h4 class="title">
+            Popüler Modüller
+          </h4>
+        </ion-col>
+        <ion-col size="6">
+          <h4 class="more ion-text-end">
+            Tümünü göster
+          </h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12">
+        <ion-slides [options]="options">
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img
+                    src="https://images.unsplash.com/photo-1485463611174-f302f6a5c1c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80">
+                  </ion-img>
+                </div>
+
+                <ion-card-title class="title">Diagnostik Full Paket</ion-card-title>
+                <ion-card-subtitle>Aracınızın tüm donanımlarını inceleyin</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img
+                    src="https://images.unsplash.com/photo-1593318560857-6cb2d0ed5c6e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+                  </ion-img>
+                </div>
+
+                <ion-card-title class="title">Car İnfo Paket</ion-card-title>
+                <ion-card-subtitle>Aracınızın anlık verileniri inceleyin.</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img
+                    src="https://images.unsplash.com/photo-1567725925744-08e40388f113?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1053&q=80">
+                  </ion-img>
+                </div>
+
+                <ion-card-title class="title">CarFuel Performans Paketi</ion-card-title>
+                <ion-card-subtitle>Aracınızın yakıt performans analizi</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img
+                    src="https://images.unsplash.com/photo-1498887960847-2a5e46312788?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+                  </ion-img>
+                </div>
+
+                <ion-card-title class="title">Ekspertiz Pro Paketi</ion-card-title>
+                <ion-card-subtitle>Km, şase ve arıza kodları</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <div class="ion-padding-horizontal wrapper">
+
+    <ion-grid class="ion-no-padding">
+      <ion-row class="ion-align-items-baseline">
+        <ion-col size="6">
+          <h4 class="title">
+            Açık Modüller
+          </h4>
+        </ion-col>
+        <ion-col size="6">
+          <h4 class="more ion-text-end">
+            Tümünü göster
+          </h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12">
+        <ion-slides [options]="categories">
+          <ion-slide>
+            <ion-card  class="category" (click)="goToModules('km')" color="danger">
+              <ion-card-header class="ion-text-center">
+                <ion-icon src="assets/dashboard.svg"></ion-icon>
+                <ion-card-title>Km </ion-card-title>
+                <ion-card-subtitle>Kilometre Tespit İşlemi</ion-card-subtitle>
+              </ion-card-header>
+              <ion-ripple-effect></ion-ripple-effect>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="category" (click)="goToModules('dtc')" color="primary">
+              <ion-card-header class="ion-text-center">
+                <ion-icon src="assets/hand.svg"></ion-icon>
+                <ion-card-title>DTC</ion-card-title>
+                <ion-card-subtitle>Arıza Kodu Durdurma</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="category" (click)="goToModules('fuel')" color="warning">
+              <ion-card-header class="ion-text-center">
+                <ion-icon src="assets/gas-station.svg"></ion-icon>
+                <ion-card-title>Fuel</ion-card-title>
+                <ion-card-subtitle>Yakıt Sistem Durumu</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="category" (click)="goToModules('rpm')" color="success">
+              <ion-card-header class="ion-text-center">
+                <ion-icon src="assets/rpm.svg"></ion-icon>
+                <ion-card-title>RPM</ion-card-title>
+                <ion-card-subtitle>Canlı Rpm Değeri</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="category" (click)="goToModules('speed')" color="tertiary">
+              <ion-card-header class="ion-text-center">
+                <ion-icon src="assets/delivery.svg"></ion-icon>
+                <ion-card-title>Speed</ion-card-title>
+                <ion-card-subtitle>Anlık Araç Hız Bilgileri</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="category" (click)="goToModules('iat')" color="danger">
+              <ion-card-header class="ion-text-center">
+                <ion-icon src="assets/temperature.svg"></ion-icon>
+                <ion-card-title>IAT</ion-card-title>
+                <ion-card-subtitle>Intake air temperature</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="category" (click)="goToModules('tp')" color="secondary">
+              <ion-card-header class="ion-text-center">
+                <ion-icon src="assets/radar.svg"></ion-icon>
+                <ion-card-title>TP</ion-card-title>
+                <ion-card-subtitle>Throttle Position Information</ion-card-subtitle>
+              </ion-card-header>
+            </ion-card>
+          </ion-slide>
+
+
+
+
+
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+  <div class="ion-padding-horizontal wrapper">
+
+    <ion-grid class="ion-no-padding">
+      <ion-row class="ion-align-items-baseline">
+        <ion-col size="6">
+          <h4 class="title">
+            Diğer Ürünlerimiz
+          </h4>
+        </ion-col>
+        <ion-col size="6">
+          <h4 class="more ion-text-end">
+            nitrobilisim.com.tr
+          </h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12">
+        <ion-slides [options]="options">
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="https://nitrobilisim.com.tr/wp-content/uploads/beyin-test-cihaz%C4%B1-1-scaled.jpg">
+                  </ion-img>
+                </div>
+                <ion-card-title class="title">Ecutest KF-1500</ion-card-title>
+                <ion-card-subtitle>Beyin Test Simülatörü</ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+          <ion-slide>
+            <ion-card class="card">
+              <ion-card-content class="ion-text-left">
+
+                <div class="img-wrapper">
+                  <ion-img src="https://nitrobilisim.com.tr/wp-content/uploads/frentest.jpg"></ion-img>
+                </div>
+
+                <ion-card-title class="title">NM FT-01 Fren Test Simülatörü
+                </ion-card-title>
+                <ion-card-subtitle>NM FT-01 fren ağır vasıta frentest simülatörü
+
+                </ion-card-subtitle>
+                <ion-card-subtitle>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </ion-card-subtitle>
+              </ion-card-content>
+            </ion-card>
+          </ion-slide>
+
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="ion-padding">
+    <ion-row>
+      <ion-col size="6">
+        <ion-badge color="light" class="ion-margin-end">
+          Nitro Mekatronik
+        </ion-badge>
+      </ion-col>
+      <ion-col size="6" class="ion-text-end">
+        <ion-badge color="light">
+          n-TalkOBD2 v1
+        </ion-badge>
+      </ion-col>
+    </ion-row>
+  </div>
+
+</ion-content>
+

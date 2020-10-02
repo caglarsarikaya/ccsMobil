@@ -1,0 +1,76 @@
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button color="primary" (click)="startApp()" [hidden]="!showSkip"
+        >Geç</ion-button
+      >
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <ion-slides
+    #slides
+    (ionSlideWillChange)="onSlideChangeStart($event)"
+    pager="false"
+  >
+    <ion-slide>
+      <img src="assets/img/symbols/nitro-logo.png" class="slide-image" />
+      <h2 class="slide-title">
+        <b>TalkOBD 2</b> Mobil Uygulamasına Hoş Geldiniz
+      </h2>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-2.png" class="slide-image" />
+      <h2 class="slide-title">TalkOBD 2 Nedir ?</h2>
+      <p>
+        <b>Nitro Mekatronik</b> bünyesinde geliştirilen OBD cihazı ile
+        aracınızın bilgilerini okuyabilirsiniz.
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/img/ica-slidebox-img-3.png" class="slide-image" />
+      <h2 class="slide-title">TalkOBD 2 Nasıl Kullanılır ?</h2>
+      <p>
+        Cihazı araca bağladıktan sonra, bluetooth vasıtasıyla cihaza bağlanarak
+        kullanabilirsiniz.
+      </p>
+    </ion-slide>
+
+    <ion-slide>
+      <div>
+        <img src="assets/img/symbols/nitro-logo.png" class="slide-image" />
+      </div>
+      <h2 class="slide-title">Hazırsanız Başlayalım?</h2>
+      <div>
+        <ion-button shape="round">
+          <img
+            style="margin-right: 10px"
+            src="assets/img/symbols/facebook.png"
+          />
+          <span>FACEBOOK</span>
+        </ion-button>
+      </div>
+
+      <div>
+        <ion-button shape="round" color="light">
+          <img
+            style="margin-right: 10px"
+            src="assets/img/symbols/google.png"
+          />
+          <span>Google</span>
+          </ion-button
+        >
+      </div>
+
+      <div>
+        <ion-button shape="round" fill="outline" (click)="startApp()">
+          <span>Giriş Yap</span>
+          <ion-icon slot="end" name="arrow-forward"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
