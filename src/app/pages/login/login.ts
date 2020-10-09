@@ -61,7 +61,8 @@ export class LoginPage {
     }
   }
 
-  onSignup() {
+  onSignup(d) {
+    alert(d)
     this.router.navigateByUrl("/signup");
   }
 }

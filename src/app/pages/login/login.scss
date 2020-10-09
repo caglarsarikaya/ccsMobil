@@ -1,13 +1,39 @@
-.login-logo {
-  padding: 20px 0;
-  min-height: 200px;
+.header {
+  margin-top: 35px;
+  background-color: #2e2f30 !important;
+  color: #ffffff;
   text-align: center;
 }
 
-.login-logo img {
-  max-width: 150px;
+
+
+
+.login-form {
+  margin-top: 50px;
+  ion-label {
+    color: #808080;
+    margin-bottom: 5px;
+  }
+
+  ion-input {
+    object-fit: contain;
+    border-radius: 8px;
+    background-color: #454647;
+    color: #ffffff;
+  }
 }
 
-.list {
-  margin-bottom: 0;
+.whiteText{
+  color: #ffffff;
+}
+
+ion-button {
+  height: 60px;
+  width: 80%;
+  margin-bottom: 10px;
+  span{
+    font-size: 18px;
+  }
+
+
 }

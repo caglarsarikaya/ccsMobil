@@ -14,7 +14,7 @@ ion-toolbar {
 }
 
 
-
+ 
 .slide-image {
   max-height: 40%;
   max-width: 60%;
@@ -39,12 +39,15 @@ p {
 }
 
 ion-button {
-  height: 50px;
+  height: 60px;
   width: 80%;
+  margin-bottom: 10px;
   img{
     margin-right: 50px;
   }
   span{
     font-size: 18px;
   }
+
+
 }

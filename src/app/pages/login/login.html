@@ -1,54 +1,97 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-  <div class="login-logo">
-    <img src="assets/img/appicon.svg" alt="Ionic logo">
-  </div>
-
-  <form #loginForm="ngForm" novalidate >
-    <ion-list>
+  <ion-title class="header">Talk OBD2 Giriş</ion-title>
+  <form #loginForm="ngForm" novalidate>
+    <div class="login-form">
       <ion-item>
-        <ion-label position="stacked" color="primary">Username</ion-label>
-        <ion-input [(ngModel)]="login.username" name="username" type="text" #username="ngModel" spellcheck="false" autocapitalize="off"
-          required>
+        <ion-label position="stacked" color="primary">E-MAIL</ion-label>
+        <ion-input
+          [(ngModel)]="login.username"
+          name="username"
+          type="text"
+          #username="ngModel"
+          spellcheck="false"
+          autocapitalize="off"
+          required
+        >
         </ion-input>
       </ion-item>
 
-      <ion-text color="danger">
-        <p [hidden]="username.valid || submitted == false" class="ion-padding-start">
-          Username is required
+      <ion-text color="warning">
+        <p
+          [hidden]="username.valid || submitted == false"
+          class="ion-padding-start"
+        >
+          Hatalı E-mail
         </p>
       </ion-text>
 
       <ion-item>
-        <ion-label position="stacked" color="primary">Password</ion-label>
-        <ion-input [(ngModel)]="login.password" name="password" type="password" #password="ngModel" required>
+        <ion-label position="stacked" color="primary" class="mb-2"
+          >SİFRE</ion-label
+        >
+        <ion-input
+          [(ngModel)]="login.password"
+          name="password"
+          type="password"
+          #password="ngModel"
+          required
+        >
         </ion-input>
       </ion-item>
 
-      <ion-text color="danger">
-        <p [hidden]="password.valid || submitted == false" class="ion-padding-start">
-          Password is required
+      <ion-text color="warning">
+        <p
+          [hidden]="password.valid || submitted == false"
+          class="ion-padding-start"
+        >
+          Hatalı Şifre
         </p>
       </ion-text>
-    </ion-list>
+    </div>
 
-    <ion-row>
-      <ion-col>
-        <ion-button (click)="onLogin(loginForm)" type="submit" expand="block">Login</ion-button>
-      </ion-col>
-      <ion-col>
-        <ion-button (click)="onSignup()" color="light" expand="block">Signup</ion-button>
-      </ion-col>
+    <ion-grid>
+      <ion-row class="whiteText">
+        <ion-col>
+          <ion-title (click)="onSignup(0)">
+            <span>Üye Ol</span>
+          </ion-title>
+        </ion-col>
+        <ion-col>
+          <ion-title (click)="onSignup(1)">
+            <span>Şifremi Unuttum</span>
+          </ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <ion-row style="justify-content: center; margin-top: 10px">
+      <ion-button
+        color="nitro"
+        shape="round"
+        (click)="onLogin(loginForm)"
+        type="submit"
+      >
+        <span>Giriş Yap</span>
+      </ion-button>
+    </ion-row>
+
+    <ion-title style="color: white; text-align: center; font-size: 16px">
+      <p>Yada</p>
+    </ion-title>
+
+    <ion-row style="justify-content: center">
+      <ion-button shape="round" color="facebook">
+        <img style="margin-right: 20px" src="assets/img/symbols/facebook.png" />
+        <span>FACEBOOK</span>
+      </ion-button>
+    </ion-row>
+
+    <ion-row style="justify-content: center">
+      <ion-button shape="round" color="light">
+        <img style="margin-right: 20px" src="assets/img/symbols/google.png" />
+        <span>Google</span>
+      </ion-button>
     </ion-row>
   </form>
-
 </ion-content>
